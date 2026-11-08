@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+:root {
+    --biru: #3b82f6;
+    --biru-gelap: #2563eb;
+    --abu-terang: #f3f4f6;
+    --abu: #9ca3af;
+    --abu-teks: #4b5563;
+    --hitam: #111827;
+    --putih: #ffffff;
+    --bayangan: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+body {
+    background-color: #f9fafb;
+    color: var(--hitam);
+    line-height: 1.6;
+}
+
+nav {
+    background: var(--putih);
+    box-shadow: var(--bayangan);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--biru);
+    text-decoration: none;
+}
+
+.menu a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--abu-teks);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover, .menu a.aktif {
+    color: var(--biru);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--biru) 0%, var(--biru-gelap) 100%);
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: white;
+    color: var(--biru);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.tombol:hover {
+    transform: translateY(-2px);
+}
+
+.grid-produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.kartu-produk {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--bayangan);
+    transition: transform 0.3s;
+}
+
+.kartu-produk:hover {
+    transform: translateY(-5px);
+}
+
+.foto-produk {
+    height: 200px;
+    background: var(--abu-terang);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.info-produk {
+    padding: 1.2rem;
+}
+
+.nama-produk {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.harga {
+    color: var(--biru);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.verifikasi-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f8fa;
+}
+
+.kotak-verifikasi {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--bayangan);
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+}
+
+.perisai {
+    width: 56px;
+    height: 56px;
+    color: var(--biru);
+    margin: 0 auto 1.5rem;
+}
+
+.spinner {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border: 3px solid #e5e7eb;
+    border-top-color: var(--biru);
+    border-radius: 50%;
+    animation: putar 0.8s linear infinite;
+    margin-top: 1rem;
+}
+
+@keyframes putar {
+    to { transform: rotate(360deg); }
+}
+
+footer {
+    background: var(--hitam);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.form-kontak {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--bayangan);
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-kontak button {
+    background: var(--biru);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
